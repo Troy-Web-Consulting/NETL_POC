@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import NxWelcome from './NxWelcome.vue';
+defineProps<{
+  title: string;
+}>();
 </script>
 
 <template>
-  <NxWelcome title="myworkspace" />
+  <router-view></router-view>
+  <!-- <NxWelcome title="myworkspace" /> -->
 </template>

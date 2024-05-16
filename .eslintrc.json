@@ -1,7 +1,5 @@
 {
-  "root": true,
   "ignorePatterns": ["!**/*"],
-  "plugins": ["@nx"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx", "*.vue"],
@@ -14,6 +12,7 @@
     "plugin:vue/vue3-essential",
     "eslint:recommended",
     "@vue/eslint-config-typescript",
-    "@vue/eslint-config-prettier/skip-formatting"
+    "@vue/eslint-config-prettier/skip-formatting",
+    "./.eslintrc.base.json"
   ]
 }

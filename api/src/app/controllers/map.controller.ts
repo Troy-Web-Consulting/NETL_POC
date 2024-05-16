@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 
 @Controller('map')
 export class MapController {
@@ -27,4 +27,19 @@ export class MapController {
 
     return pointsObject;
   }
+
+  @Post()
+  async uploadCSVData(@Body() data: { Longitude: number; Latitude: number }[]) {
+
+    const transformedData = data.map(item => [item.Longitude, item.Latitude]);
+
+    const pointsObject = transformedData.reduce((obj, point, index) => {
+      obj[`point${index + 1}`] = point;
+      return obj;
+    }, {});
+
+    return pointsObject;
+  }
 }
+
+

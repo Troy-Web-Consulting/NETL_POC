@@ -1,15 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from './app/views/Home.vue'
+import Login from './app/views/Login.vue'
 import Map from './app/views/Map.vue';
 
 console.log('router is mounted');
 
 const routes = [
     
-    {
+  {
         path: '/',
-        name: 'home',
-        component: Home
+        name: 'login',
+        component: Login
     },
   {
     path: '/map',
